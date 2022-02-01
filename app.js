@@ -55,6 +55,7 @@ const createCard = async (meal) => {
         }
         let recipe = recipeBtn.parentElement.parentElement.children[2];
         recipe.classList.toggle('show');
+        document.querySelector('body').classList.add('fixed');
     });
 
     // creates the recipe pop up
@@ -72,6 +73,7 @@ const createCard = async (meal) => {
     closeBtn.addEventListener('click', () => {
         let recipe = recipeBtn.parentElement.parentElement.children[2];
         recipe.classList.toggle('show');
+        document.querySelector('body').classList.remove('fixed');
     })
 
     closeCol.append(closeBtn);
