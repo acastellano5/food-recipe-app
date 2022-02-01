@@ -116,6 +116,13 @@ const getInfo = (allMeals) => {
     }
 }
 
+const displayErr = () => {
+    const errMsg = document.createElement('p');
+    errMsg.classList.add('err-msg', 'text-white', 'text-center', 'display-5');
+    errMsg.innerHTML = "<p>Sorry! We couldn't find <br> any recipes.</p>";
+    row.append(errMsg);
+}
+
 const getMeals = async () => {
     try {
         let inp = input.value;
@@ -125,15 +132,21 @@ const getMeals = async () => {
         getInfo(allMeals);
     } catch (e) {
         console.log(e);
+        displayErr();
+    }
+}
+
+const rmExisting = (className) => {
+    const existing = document.querySelectorAll(`.${className}`);
+    for (let el of existing) {
+        el.remove();
     }
 }
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    const existing = document.querySelectorAll('.meal-block');
-    for (let meal of existing) {
-        meal.remove();
-    }
+    rmExisting('meal-block');
+    rmExisting('err-msg');
     getMeals();
     input.value = '';
 })
