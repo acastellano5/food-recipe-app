@@ -13,8 +13,6 @@ const getVideo = async (id) => {
 }
 
 const createCard = async (meal) => {
-    // console.log(meal.strMeal)
-
     // creates column
     const col = document.createElement('div');
     col.classList.add('col-9', 'col-sm-5', 'col-lg-3', 'm-3', 'meal-block');
