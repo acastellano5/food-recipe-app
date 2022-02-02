@@ -9,5 +9,6 @@ Welcome to my food recipe app! Using the search bar, you can search for any ingr
 ## Tech Stack / Tools
 * HTML
 * CSS
+* Bootstrap
 * Javascript
 * [TheMealDB API](https://www.themealdb.com/api.php)
