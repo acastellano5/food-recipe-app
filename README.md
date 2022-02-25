@@ -12,3 +12,4 @@ Welcome to my food recipe app! Using the search bar, you can search for any ingr
 * Bootstrap
 * Javascript
 * [TheMealDB API](https://www.themealdb.com/api.php)
+* [Axios](https://github.com/axios/axios)
